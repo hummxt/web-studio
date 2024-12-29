@@ -1,10 +1,19 @@
 import "./Home.css";
 import dashboardImage from "../assets/images/dashboard.svg";
+import activityImage from "../assets/images/activity.svg";
+import arrowIcon from "../assets/images/Icon.svg";
+import logo1 from "../assets/images/Logo 1.svg";
+import logo2 from "../assets/images/Logo 2.svg";
+import logo3 from "../assets/images/Logo 3.svg";
+import logo4 from "../assets/images/Logo 4.svg";
+import logo5 from "../assets/images/Logo 5.svg";
+import sales from "../assets/images/Feature Icon with circle.svg"
+import management from "../assets/images/Feature Icon with circle (1).svg"
+import report from "../assets/images/Feature Icon with circle (2).svg"
 import { MdSecurity } from "react-icons/md";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { BiLike } from "react-icons/bi";
 import { TiHeadphones } from "react-icons/ti";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 
 function Home() {
   return (
@@ -82,9 +91,9 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="work flex items-center justify-center flex-row mt-20 p-10 w-[80%]">
-          <div className="left flex items-right justify-center flex-col gap-8">
-            <h3 className="text-gradient">Why should you work with us?</h3>
+        <div className="work flex items-center justify-center flex-row mt-20 mb-20 p-10 w-[80%]">
+          <div className="left flex items-right justify-center flex-col gap-6 text-primary">
+            <h3 className="text-gradient text-lg">Why should you work with us?</h3>
             <h1 className="text-3xl w-[50%]">To upscale your business to the next level</h1>
             <p className="w-[60%] font-light">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -92,27 +101,82 @@ function Home() {
               erat, sed diam voluptua invidunt ut labore.
             </p>
           </div>
-          <div className="right flex items-center justify-center flex-col">
+          <div className="right flex items-start justify-center flex-col w-[60%] gap-6 text-primary">
             <div className="row flex items-center justify-center gap-4">
-              <FaArrowAltCircleRight className="text-6xl text-primary"/>
+              <img src={arrowIcon} alt="Arrow Icon" className="w-12"/>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod.
               </p>
             </div>
-            <div className="row">
-              <FaArrowAltCircleRight />
+            <div className="row flex items-center justify-center gap-4">
+            <img src={arrowIcon} alt="Arrow Icon" className="w-12"/>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod.
               </p>
             </div>
-            <div className="row">
-              <FaArrowAltCircleRight />
+            <div className="row flex items-center justify-center gap-4">
+            <img src={arrowIcon} alt="Arrow Icon" className="w-12"/>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod.
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="conversion flex justify-center items-center w-full h-auto p-20" style={{
+    background: "linear-gradient(90deg, rgba(58,180,177,0.28904061624649857) 72%, rgba(96,32,251,0) 90%)",
+  }}>
+          <div className="left-info flex justify-center items-start flex-col w-[50%] gap-6 text-primary">
+            <h1 className="text-4xl w-[70%]">More impressions, more conversions</h1>
+            <p className="text-md font-light w-[72%]">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore.</p>
+            <div className="trial p-6 bg-primary rounded-xl w-36 h-14 flex items-center justify-center">
+            <a href="#" className="text-secondary">Free Trial</a>
+            </div>
+          </div>
+          <div className="right-image">
+            <img src={activityImage} alt="Activity Image" className="w-[88%] h-100" />
+          </div>
+        </div>
+        <div className="logos w-[86%] h-10 flex items-center justify-between p-20 mt-5">
+          <img src={logo1} alt="Logo 1" className="w-40 h-auto" />
+          <img src={logo2} alt="Logo 2" className="w-40 h-auto"/>
+          <img src={logo3} alt="Logo 3" className="w-40 h-auto"/>
+          <img src={logo4} alt="Logo 4" className="w-40 h-auto"/>
+          <img src={logo4} alt="Logo 5" className="w-40 h-auto"/>
+        </div>
+        <div className="sales flex items-center justify-center flex-row mt-10 mb-20 p-10 w-[80%]">
+        <div className="left-dicover flex items-right justify-center flex-col gap-6 text-primary">
+            <h3 className="text-gradient text-lg">Discover More</h3>
+            <h1 className="text-4xl w-[70%]">Analyze your sales and marketing leads</h1>
+            <p className="w-[80%] font-light">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua invidunt ut labore.
+            </p>
+          </div>
+          <div className="right-info flex items-center justify-center flex-col gap-4 w-[100%] text-primary">
+            <div className="row flex gap-4">
+              <img src={sales} alt="Sales Icon" />
+              <div className="sales-info flex gap-2 flex-col justify-center items-start">
+                <h2>Sales Tracking</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+              </div>
+            </div>
+            <div className="row flex gap-4">
+            <img src={management} alt="Project Management Icon" />
+              <div className="management-info flex gap-2 flex-col justify-center items-start">
+                <h2>Project Management</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+              </div>
+            </div>
+            <div className="row flex gap-4">
+            <img src={report} alt="Report Icon" />
+              <div className="report-info flex gap-2 flex-col justify-center items-start">
+                <h2>Activity Report</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+              </div>
             </div>
           </div>
         </div>
