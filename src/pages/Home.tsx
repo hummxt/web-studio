@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 import dashboardImage from "../assets/images/dashboard.svg";
 import activityImage from "../assets/images/activity.svg";
 import arrowIcon from "../assets/images/Icon.svg";
@@ -7,13 +8,21 @@ import logo2 from "../assets/images/Logo 2.svg";
 import logo3 from "../assets/images/Logo 3.svg";
 import logo4 from "../assets/images/Logo 4.svg";
 import logo5 from "../assets/images/Logo 5.svg";
-import sales from "../assets/images/Feature Icon with circle.svg"
-import management from "../assets/images/Feature Icon with circle (1).svg"
-import report from "../assets/images/Feature Icon with circle (2).svg"
+import sales from "../assets/images/Feature Icon with circle.svg";
+import management from "../assets/images/Feature Icon with circle (1).svg";
+import report from "../assets/images/Feature Icon with circle (2).svg";
+import bilmirem from "../assets/images/bilmirem.svg";
+import chat from "../assets/images/chat.svg";
+import bot from "../assets/images/bot.svg";
+import ceo from "../assets/images/ceo.png";
+import pisik from "../assets/images/pisik.png";
+import idk from "../assets/images/idk.png";
 import { MdSecurity } from "react-icons/md";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { BiLike } from "react-icons/bi";
 import { TiHeadphones } from "react-icons/ti";
+import Footer from "../components/Footer";
+
 
 function Home() {
   return (
@@ -180,7 +189,62 @@ function Home() {
             </div>
           </div>
         </div>
+        <h1 className="flex items-center justify-center text-3xl text-primary">Features</h1>
+        <div className="features flex items-center justify-center flex-row mt-10 mb-20 p-10 w-[80%] text-primary">
+          <div className="row flex items-start justify-center gap-4 flex-col p-4">
+            <img src={bilmirem} alt="Bilmirem Icon" />
+            <h2 className="text-3xl">Advanced 256-bit encryption</h2>
+            <p className="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+          </div>
+          <div className="w-[2px] h-20 sm:h-64 lg:h-56 bg-grey m-4"></div>
+          <div className="row flex items-start justify-center gap-4 flex-col p-4">
+          <img src={chat} alt="Chat Icon" />
+            <h2 className="text-3xl">Simple collaboration tools</h2>
+            <p className="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+          </div>
+          <div className="w-[2px] h-20 sm:h-64 lg:h-56 bg-grey m-4"></div>
+          <div className="row flex items-start justify-center gap-4 flex-col p-4">
+          <img src={bot} alt="Bot Icon" />
+            <h2 className="text-3xl">Customizable AI features</h2>
+            <p className="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+          </div>
+        </div>
+        <h1 className="flex items-center justify-center text-3xl text-primary p-4">The stunning results our
+        customers have experienced</h1>
       </div>
+      <div className="customers flex items-center justify-center flex-row gap-8 mt-10 mb-20 p-8 w-full text-primary">
+        <div className="card w-[24%] p-8 flex items-center justify-center flex-col gap-6 rounded-lg border-2 border-border">
+          <p className="text-center w-[80%]">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <div className="avatar flex items-center justify-center flex-col gap-4 ">
+            <img src={ceo} alt="Avatar Image 1" className="w-12 rounded-full" />
+            <div className="name-position text-center">
+              <h4>Ron Wood</h4>
+              <h4 className="font-light">CEO</h4>
+            </div>
+          </div>
+        </div>
+        <div className="card w-[24%] p-8 flex items-center justify-center flex-col gap-6 rounded-lg border-2 border-border text-primary">
+          <p className="text-center w-[80%]">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <div className="avatar flex items-center justify-center flex-col gap-4 ">
+            <img src={pisik} alt="Avatar Image 1" className="w-12 rounded-full" />
+            <div className="name-position text-center">
+              <h4>Mark Mason</h4>
+              <h4 className="font-light">Marketing Manager</h4>
+            </div>
+          </div>
+        </div>
+        <div className="card w-[24%] p-8 flex items-center justify-center flex-col gap-6 rounded-lg border-2 border-border">
+          <p className="text-center w-[80%]">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <div className="avatar flex items-center justify-center flex-col gap-4 ">
+            <img src={idk} alt="Avatar Image 1" className="w-12 rounded-full" />
+            <div className="name-position text-center">
+              <h4>Sam Preston</h4>
+              <h4 className="font-light">CTO</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 }

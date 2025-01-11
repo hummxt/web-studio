@@ -1,19 +1,35 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <>
       <header className="min-w-full h-auto p-6 flex justify-between items-center">
         <div className="logo text-2xl text-primary">
-          <h2>{"{FinCompany"}</h2>
+          <Link to='/'>{"{FinCompany"}</Link>
         </div>
         <nav className="flex gap-10 justify-center items-center font-semibold">
-            <h5 className="text-primary">Home</h5>
-            <h5 className="text-primary">Product</h5>
-            <h5 className="text-primary">Pricing</h5>
-            <h5 className="text-primary">About us</h5>
-            <h5 className="text-primary">Blog</h5>
-            <h5 className="text-primary">Contact</h5>
+          <Link to="/" className="text-primary">
+            Home
+          </Link>
+          <Link to="/product" className="text-primary">
+            Product
+          </Link>
+          <Link to="/pricing" className="text-primary">
+            Pricing
+          </Link>
+          <Link to="/about" className="text-primary">
+            About us
+          </Link>
+          <Link to="/blog" className="text-primary">
+            Blog
+          </Link>
+          <Link to="/contact" className="text-primary">
+            Contact
+          </Link>
             <div className="trial p-6 bg-primary rounded-xl w-36 h-14 flex items-center justify-center">
-            <a href="#" className="text-secondary">Free Trial</a>
+              <Link to="/contact" className="text-secondary">
+                Free Trial
+              </Link>
             </div>
         </nav>
       </header>
