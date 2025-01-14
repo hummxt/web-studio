@@ -9,3 +9,7 @@
     font-family: "Arimo", serif;
     font-weight: 700;
 }
+
+textarea {
+    resize: none;
+}

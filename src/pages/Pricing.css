@@ -1,0 +1,11 @@
+.standart:hover .first-svg, .platinium:hover .first-svg, .regular:hover .first-svg {
+  display: none;
+}
+
+.standart:hover .second-svg, .platinium:hover .second-svg, .regular:hover .second-svg {
+  display: block;
+}
+
+.second-svg {
+  display: none;
+}

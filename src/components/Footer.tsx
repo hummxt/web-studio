@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PiCopyright } from "react-icons/pi";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -21,9 +22,9 @@ function Footer() {
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy.
         </p>
-        <button className="bg-primary text-secondary px-5 py-3 rounded-lg">
+        <Link to="/pricing" className="bg-primary text-secondary px-5 py-3 rounded-xl">
           View pricing
-        </button>
+        </Link>
       </div>
       <footer className="min-w-full h-auto flex items-center justify-center flex-col bg-primary mt-20 p-4">
         <div className="col w-full h-auto flex items-start justify-center p-12 gap-24">

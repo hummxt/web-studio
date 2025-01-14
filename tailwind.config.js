@@ -17,7 +17,8 @@ export default {
       input: "rgba(43, 46, 60, 1)",
       button: "rgba(224, 228, 252, 1)",
       check: "rgba(213, 245, 234, 1)",
-      card: "rgba(215, 231, 249, 1)"
+      card: "rgba(215, 231, 249, 1)",
+      contact: "rgba(240, 242, 254, 1)"
     }
   },
   plugins: [],
