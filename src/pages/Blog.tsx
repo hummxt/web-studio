@@ -63,59 +63,62 @@ function Blog() {
         </div>
         <h1 className="text-4xl text-center mt-28 p-10 z-0">All Posts</h1>
         <div className="all-posts w-[93%] flex items-center justify-center flex-col p-14 gap-4 mb-20">
-          <div className="row flex items-center justify-center">
-            <div className="post-1 flex items-start justify-center flex-col gap-4 p-2">
-              <img
-                src={excellentCX}
-                className="w-[88%]"
-                alt="Excellent CX Image"
-              />
-              <h2 className="text-xl">
-                7 Automation use cases that foster excellent CX
-              </h2>
-              <p className="text-md font-medium w-[89%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
-              </p>
-              <p className="text-md font-medium">
-                Luke Matthews l November 8, 2021
-              </p>
-            </div>
-            <div className="post-2 flex items-start justify-center flex-col gap-4 p-2">
+          <div className="row flex gap-4 justify-center m-auto">
+          <div className="post w-[48%] flex items-start justify-center flex-col gap-4 p-4 hover:bg-gray">
+  <img
+    src={excellentCX}
+    className="w-full rounded-md"
+    alt="Excellent CX Image"
+  />
+  <h2 className="text-xl font-semibold">
+    7 Automation use cases that foster excellent CX
+  </h2>
+  <p className="text-md font-medium">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt.
+  </p>
+  <p className="text-sm font-medium text-gray">
+    Luke Matthews | November 8, 2021
+  </p>
+</div>
+
+            <div className="post w-[48%] flex items-start justify-center flex-col gap-4 p-4 hover:bg-card">
               <img
                 src={managingRails}
-                className="w-[88%]"
-                alt="Excellent CX Image"
+                className="w-full rounded-md"
+                alt="Managing Rails Image"
               />
-              <h2 className="text-xl w-[84%]">
+              <h2 className="text-xl font-semibold">
                 Managing Rails application secrets with encrypted credentials
               </h2>
-              <p className="text-md font-medium w-[89%]">
+              <p className="text-md font-medium">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </p>
-              <p className="text-md font-medium">
-                Luke Matthews l November 8, 2021
+              <p className="text-sm font-medium text-gray-600">
+                Luke Matthews | November 8, 2021
               </p>
             </div>
-            <div className="post-3 flex items-start justify-center flex-col gap-4 p-2">
+
+            <div className="post w-[48%] flex items-start justify-center flex-col gap-4 p-4 hover:bg-card">
               <img
                 src={basedMarketing}
-                className="w-[88%]"
-                alt="Excellent CX Image"
+                className="w-full rounded-md"
+                alt="Account-based Marketing Image"
               />
-              <h2 className="text-xl">
+              <h2 className="text-xl font-semibold">
                 Account-based marketing: Data-driven selection for ABM success
               </h2>
-              <p className="text-md font-medium w-[89%]">
+              <p className="text-md font-medium">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </p>
-              <p className="text-md font-medium">
-                Luke Matthews l November 8, 2021
+              <p className="text-sm font-medium text-gray-600">
+                Luke Matthews | November 8, 2021
               </p>
             </div>
           </div>
+
           <div className="row flex items-center justify-center mt-5 mb-5">
             <div className="post-4 flex items-start justify-center flex-col gap-4 p-2">
               <img

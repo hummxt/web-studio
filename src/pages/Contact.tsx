@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { IoMdMail } from "react-icons/io";
 import { GiTriangleTarget } from "react-icons/gi";
@@ -38,16 +39,26 @@ function Contact() {
   return (
     <>
       <div className="container w-full flex items-center justify-center flex-col">
-        <div className="contact w-full flex items-center justify-center flex-col p-14 text-primary gap-10 mb-20">
+        <div className="contact w-full flex items-center justify-center flex-col p-14 text-primary gap-10 mb-20 overflow-hidden relative z-0">
+        <div
+        className="absolute top-1/2 left-0 w-[800px] h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+        style={{
+          background:
+            "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
+        }}
+      />
+      <div
+        className="absolute top-1/2 right-0 w-[800px] h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+        style={{
+          background:
+            "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
+        }}
+      />
           <h1 className="text-4xl">Get in touch with us</h1>
           <div
             className="contact-container flex items-center justify-center w-full p-14 gap-20"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(0,255,231,0.12657563025210083) 0%, rgba(255,255,255,1) 100%)",
-            }}
           >
-            <div className="left flex items-start justify-center flex-col bg-contact gap-8 p-14">
+            <div className="left flex items-start justify-center flex-col bg-contact gap-8 p-14 z-0">
               <div className="text-container flex items-start justify-center flex-col gap-3">
                 <h2 className="text-3xl">Drop us a message</h2>
                 <h3 className="text-md font-medium">
@@ -91,16 +102,14 @@ function Contact() {
                   className="p-3 rounded-xl outline-none text-md font-semibold w-full form-input"
                   required
                 ></textarea>
-                <button
-                  type="submit"
-                  className="bg-primary text-secondary px-5 py-3 rounded-lg w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send'}
-                </button>
+                <div className="trial p-6 w-full h-10 bg-primary rounded-xl flex items-center justify-center before:ease relative overflow-hidden text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-40 before:w-12 before:translate-x-24 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-[510px] drop-shadow-xl">
+            <Link to="/" className="text-secondary relative z-10">
+              Free Trial
+            </Link>
+          </div>
               </form>
             </div>
-            <div className="right flex items-start justify-center flex-col gap-5 p-14">
+            <div className="right flex items-start justify-center flex-col gap-5 p-14 z-0">
               <div className="call flex items-start justify-center gap-4">
                 <div className="icon m-auto rounded-full bg-quality p-2 text-xl text-secondary">
                   <FaPhoneAlt />

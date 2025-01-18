@@ -16,7 +16,7 @@ function Pricing() {
   const toggleAnswer = (index) => {
     setOpenQuestion(openQuestion === index ? null : index);
   };
-  
+
   const platiniumMonthlyPrice = "$342";
   const platiniumYearlyPrice = "$2101";
   const standartMonthlyPrice = "$234";
@@ -25,7 +25,14 @@ function Pricing() {
   return (
     <>
       <div className="min-w-full h-auto flex items-center justify-center flex-col">
-        <div className="pricing-plans flex items-center justify-center flex-col p-10 text-primary">
+        <div
+          className="absolute top-1/2 left-0 w-[800px] h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+          style={{
+            background:
+              "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
+          }}
+        />
+        <div className="pricing-plans flex items-center justify-center flex-col p-10 text-primary z-0">
           <div className="information  flex items-center justify-center flex-col text-center gap-5">
             <h1 className="text-5xl w-[70%] leading-tight">
               Pricing plans that suit you
@@ -174,9 +181,9 @@ function Pricing() {
                     For Limited Period
                   </p>
                 </div>
-                <div className="trial bg-primary rounded-xl w-36 h-14 flex items-center justify-center m-4">
-                  <Link to="/contact" className="text-secondary">
-                    Get Started
+                <div className="trial bg-primary rounded-xl flex items-center justify-center before:ease relative h-14 w-36 overflow-hidden border border-green-500 bg-green-500 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-40 drop-shadow-xl">
+                  <Link to="/" className="text-secondary relative z-10">
+                    Free Trial
                   </Link>
                 </div>
               </div>
@@ -322,14 +329,18 @@ function Pricing() {
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                 </p>
                 <div className="free flex items-center justify-center flex-col p-4 gap-1">
-                  <h3 className="text-3xl">{selected === "monthly" ? platiniumMonthlyPrice : platiniumYearlyPrice}</h3>
+                  <h3 className="text-3xl">
+                    {selected === "monthly"
+                      ? platiniumMonthlyPrice
+                      : platiniumYearlyPrice}
+                  </h3>
                   <p className="font-light text-sm text-center">
                     For Limited Period
                   </p>
                 </div>
-                <div className="trial bg-primary rounded-xl w-36 h-14 flex items-center justify-center m-4">
-                  <Link to="/contact" className="text-secondary">
-                    Get Started
+                <div className="trial bg-primary rounded-xl flex items-center justify-center before:ease relative h-14 w-36 overflow-hidden border border-green-500 bg-green-500 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-40 drop-shadow-xl">
+                  <Link to="/" className="text-secondary relative z-10">
+                    Free Trial
                   </Link>
                 </div>
               </div>
@@ -439,14 +450,18 @@ function Pricing() {
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                 </p>
                 <div className="free flex items-center justify-center flex-col p-4 gap-1">
-                  <h3 className="text-3xl">{selected === "monthly" ? standartMonthlyPrice : standartYearlyPrice}</h3>
+                  <h3 className="text-3xl">
+                    {selected === "monthly"
+                      ? standartMonthlyPrice
+                      : standartYearlyPrice}
+                  </h3>
                   <p className="font-light text-sm text-center">
                     Billing Monthly
                   </p>
                 </div>
-                <div className="trial bg-primary rounded-xl w-36 h-14 flex items-center justify-center m-4">
-                  <Link to="/contact" className="text-secondary">
-                    Get Started
+                <div className="trial bg-primary rounded-xl flex items-center justify-center before:ease relative h-14 w-36 overflow-hidden border border-green-500 bg-green-500 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-40 drop-shadow-xl">
+                  <Link to="/" className="text-secondary relative z-10">
+                    Free Trial
                   </Link>
                 </div>
               </div>
@@ -468,7 +483,7 @@ function Pricing() {
             </p>
           </div>
           <div className="questions flex items-start flex-col gap-4">
-            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto">
+            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto transition-transform transform hover:scale-105 hover:shadow-lg">
               <div className="q-container flex items-center justify-between gap-16">
                 <h2 className="text-lg">How do I grow my business?</h2>
                 {openQuestion === 1 ? (
@@ -483,6 +498,7 @@ function Pricing() {
                   />
                 )}
               </div>
+
               {openQuestion === 1 && (
                 <p className="mt-4 text-sm">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -491,7 +507,7 @@ function Pricing() {
                 </p>
               )}
             </div>
-            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto">
+            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto transition-transform transform hover:scale-105 hover:shadow-lg">
               <div className="q-container flex items-center justify-between gap-16">
                 <h2 className="text-lg">How do I contact the support?</h2>
                 {openQuestion === 2 ? (
@@ -514,7 +530,7 @@ function Pricing() {
                 </p>
               )}
             </div>
-            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto">
+            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto transition-transform transform hover:scale-105 hover:shadow-lg">
               <div className="q-container flex items-center justify-between gap-16">
                 <h2 className="text-lg">Can I cancel my subscription?</h2>
                 {openQuestion === 3 ? (
@@ -537,7 +553,7 @@ function Pricing() {
                 </p>
               )}
             </div>
-            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto">
+            <div className="question bg-secondary px-8 py-6 rounded-xl text-primary w-[470px] h-auto transition-transform transform hover:scale-105 hover:shadow-lg">
               <div className="q-container flex items-center justify-between gap-16">
                 <h2 className="text-lg">Is a credit card required?</h2>
                 {openQuestion === 4 ? (

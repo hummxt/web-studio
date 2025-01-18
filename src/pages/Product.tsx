@@ -1,4 +1,5 @@
 import "./Home.css";
+import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import dashboardImage from "../assets/images/dashboard.svg";
@@ -19,12 +20,18 @@ import bilmirem from "../assets/images/bilmirem.svg";
 import chat from "../assets/images/chat.svg";
 import bot from "../assets/images/bot.svg";
 
-
 function Product() {
   return (
     <>
       <div className="min-w-full flex items-center justify-center flex-col">
-        <div className="services flex items-center justify-center flex-col w-full h-auto p-10">
+        <div
+          className="absolute top-[90%] right-0 w-[800px] h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+          style={{
+            background:
+              "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
+          }}
+        />
+        <div className="services flex items-center justify-center flex-col w-full h-auto p-10 z-0">
           <div className="top flex items-center justify-center m-10">
             <div className="left flex items-start flex-col gap-6">
               <h1 className="text-primary text-5xl w-[80%]">
@@ -35,17 +42,23 @@ function Product() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div className="button flex items-start gap-4">
-                <div className="trial p-6 bg-primary rounded-xl w-36 h-14 flex items-center justify-center">
-                  <Link to="/product" className="text-secondary">
+                <div className="trial p-6 bg-primary rounded-xl flex items-center justify-center before:ease relative h-14 w-36 overflow-hidden text-secondary shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-40 drop-shadow-xl">
+                  <Link to="/" className="text-secondary relative z-10">
                     Get Started
                   </Link>
                 </div>
-                <Link
-                  to="/contact"
-                  className="contact p-6 bg-secondary text-primary border-2 border-grey rounded-xl w-36 h-14 flex items-center justify-center"
-                >
-                  Contact us
-                </Link>
+
+                <div className="group relative h-14 w-36 overflow-hidden border-2 border-grey rounded-xl bg-secondary text-primary transition-all duration-500 hover:bg-primary hover:text-secondary">
+                  <div className="absolute inset-0 flex items-center justify-center bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    <span className="font-bold"><FaArrowRightLong /></span>
+                  </div>
+                  <Link
+                    to="/contact"
+                    className="flex h-full w-full items-center justify-center text-inherit no-underline"
+                  >
+                    Contact us
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -73,7 +86,7 @@ function Product() {
           </div>
         </div>
         <div
-          className="information-company flex items-center justify-center flex-col w-[1519px] p-10 mt-12 text-primary"
+          className="information-company flex items-center justify-center flex-col w-[1519px] p-10 mt-12 text-primary z-0"
           style={{
             background:
               "linear-gradient(90deg, rgba(0,232,255,0.1741946778711485) 0%, rgba(0,232,255,0.2274159663865546) 47%)",
@@ -133,25 +146,34 @@ function Product() {
             </div>
           </div>
         </div>
-        <div className="client-feedback flex items-center justify-center text-primary p-14">
-          <div className="left flex items-start justify-center flex-col gap-6 p-10">
-            <h4 className="text-gradient text-2xl">Marketing insights</h4>
-            <h2 className="text-5xl w-[60%] leading-tight">
-              Data-driven client feedback
-            </h2>
-            <p className="text-md font-light w-[80%]">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren.
-            </p>
-          </div>
-          <div className="right w-full flex items-center justify-center p-10">
-            <img
-              src={smallDashboard}
-              alt="Dashboard"
-              className="w-[80%] h-auto"
-            />
+        <div className="client-feedback relative flex items-center justify-center text-primary p-14 overflow-hidden">
+          <div
+            className="absolute top-1/2 left-0 w-[800px] h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+            style={{
+              background:
+                "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
+            }}
+          />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto">
+            <div className="left flex items-start justify-center flex-col gap-6 p-10 md:w-1/2">
+              <h4 className="text-gradient text-2xl">Marketing insights</h4>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Data-driven client feedback
+              </h2>
+              <p className="text-md font-light">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren.
+              </p>
+            </div>
+            <div className="right w-full md:w-1/2 flex items-center justify-center p-10">
+              <img
+                src={smallDashboard}
+                alt="Dashboard"
+                className="w-[80%] h-auto"
+              />
+            </div>
           </div>
         </div>
         <div className="time-tracker flex items-center justify-center w-full gap-6 p-14 text-primary">
@@ -171,27 +193,34 @@ function Product() {
             </p>
           </div>
         </div>
-        <div className="lead-generation flex items-center justify-center text-primary p-14">
-          <div className="left flex items-start justify-center flex-col gap-6 p-10">
-            <h4 className="text-gradient text-2xl">Lead Generation</h4>
-            <h2 className="text-5xl leading-tight">
-            More leads that convert
-            </h2>
-            <p className="text-md font-light w-[80%]">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
-            </p>
-          </div>
-          <div className="right w-full flex items-center justify-center p-10" 
-          style={{
-            borderRadius: "160px",
-            background: "radial-gradient(circle, rgba(0,255,231,0.12657563025210083) 0%, rgba(255,255,255,1) 100%)"
-          }}
-          >
-            <img
-              src={smallDashboard}
-              alt="Dashboard"
-              className="w-[80%] h-auto"
-            />
+        <div className="lead-generation relative flex items-center justify-center text-primary p-14 overflow-hidden">
+          <div
+            className="absolute top-1/2 right-0 w-[800px] h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+            style={{
+              background:
+                "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
+            }}
+          />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto">
+            <div className="left flex items-start justify-center flex-col gap-6 p-10 md:w-1/2">
+              <h4 className="text-gradient text-2xl">Lead Generation</h4>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                More leads that convert
+              </h2>
+              <p className="text-md font-light">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren.
+              </p>
+            </div>
+            <div className="right w-full md:w-1/2 flex items-center justify-center p-10">
+              <img
+                src={smallDashboard}
+                alt="Dashboard"
+                className="w-[80%] h-auto"
+              />
+            </div>
           </div>
         </div>
         <div className="time-tracker flex items-center justify-center w-full gap-6 p-14 text-primary">
@@ -200,32 +229,44 @@ function Product() {
           </div>
           <div className="right flex items-start justify-center flex-col w-full gap-6 p-10">
             <h4 className="text-gradient text-2xl">Remote Teams</h4>
-            <h2 className="text-5xl leading-tight">
-            Real-time collaboration
-            </h2>
+            <h2 className="text-5xl leading-tight">Real-time collaboration</h2>
             <p className="text-md font-light w-[84%]">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren.
             </p>
           </div>
         </div>
-        <h1 className="flex items-center justify-center text-3xl text-primary p-4 mt-10">Features</h1>
+        <h1 className="flex items-center justify-center text-3xl text-primary p-4 mt-10">
+          Features
+        </h1>
         <div className="features flex items-center justify-center flex-row mt-10 mb-20 w-[80%] text-primary">
           <div className="row flex items-start justify-center gap-4 flex-col p-4">
             <img src={bilmirem} alt="Bilmirem Icon" />
             <h2 className="text-3xl">Advanced 256-bit encryption</h2>
-            <p className="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <p className="font-light">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor.
+            </p>
           </div>
           <div className="w-[2px] h-20 sm:h-64 lg:h-56 bg-grey m-4"></div>
           <div className="row flex items-start justify-center gap-4 flex-col p-4">
-          <img src={chat} alt="Chat Icon" />
+            <img src={chat} alt="Chat Icon" />
             <h2 className="text-3xl">Simple collaboration tools</h2>
-            <p className="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <p className="font-light">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor.
+            </p>
           </div>
           <div className="w-[2px] h-20 sm:h-64 lg:h-56 bg-grey m-4"></div>
           <div className="row flex items-start justify-center gap-4 flex-col p-4">
-          <img src={bot} alt="Bot Icon" />
+            <img src={bot} alt="Bot Icon" />
             <h2 className="text-3xl">Customizable AI features</h2>
-            <p className="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <p className="font-light">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor.
+            </p>
           </div>
         </div>
         <Footer />
