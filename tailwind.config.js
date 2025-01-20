@@ -20,7 +20,6 @@ export default {
       card: "rgba(215, 231, 249, 1)",
       contact: "rgba(240, 242, 254, 1)",
       gray: "#cbd5e0"
-
     }
   },
   plugins: [],

@@ -1,6 +1,4 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
 import { IoMdMail } from "react-icons/io";
 import { GiTriangleTarget } from "react-icons/gi";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -58,7 +56,7 @@ function Contact() {
           <div
             className="contact-container flex items-center justify-center w-full p-14 gap-20"
           >
-            <div className="left flex items-start justify-center flex-col bg-contact gap-8 p-14 z-0">
+            <div className="left flex items-start justify-center flex-col bg-contact gap-8 p-14 z-0 drop-shadow-2xl">
               <div className="text-container flex items-start justify-center flex-col gap-3">
                 <h2 className="text-3xl">Drop us a message</h2>
                 <h3 className="text-md font-medium">
@@ -102,10 +100,10 @@ function Contact() {
                   className="p-3 rounded-xl outline-none text-md font-semibold w-full form-input"
                   required
                 ></textarea>
-                <div className="trial p-6 w-full h-10 bg-primary rounded-xl flex items-center justify-center before:ease relative overflow-hidden text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-40 before:w-12 before:translate-x-24 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-[510px] drop-shadow-xl">
-            <Link to="/" className="text-secondary relative z-10">
-              Free Trial
-            </Link>
+                <div className="send p-6 w-full h-10 bg-primary rounded-xl flex items-center justify-center before:ease relative overflow-hidden text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-40 before:w-12 before:translate-x-24 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-[510px] drop-shadow-xl">
+            <button type="submit" className="text-secondary relative z-10" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
           </div>
               </form>
             </div>
@@ -140,7 +138,6 @@ function Contact() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
       <ToastContainer />
     </>

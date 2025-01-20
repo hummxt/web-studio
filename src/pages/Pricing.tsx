@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./Pricing.css";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import regularIcon from "../assets/images/regular.svg";
-import platiniumIcon from "../assets/images/platinium.svg";
-import standartIcon from "../assets/images/standart.svg";
+import regularIcon from "../assets/images/pricing-images/regular.svg";
+import platiniumIcon from "../assets/images/pricing-images/platinium.svg";
+import standartIcon from "../assets/images/pricing-images/standart.svg";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
@@ -578,7 +577,6 @@ function Pricing() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

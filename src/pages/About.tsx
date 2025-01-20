@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import peopleWorking from "../assets/images/about-images/people-working.png";
 import manWorking from "../assets/images/about-images/man-working.png";
 import macBook from "../assets/images/about-images/macbook.svg";
@@ -231,7 +230,6 @@ function About() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

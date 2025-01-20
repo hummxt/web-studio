@@ -1,24 +1,23 @@
 import "./Home.css";
 import { FaArrowRightLong } from "react-icons/fa6";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import dashboardImage from "../assets/images/dashboard.svg";
-import logo1 from "../assets/images/Logo 1.svg";
-import logo2 from "../assets/images/Logo 2.svg";
-import logo3 from "../assets/images/Logo 3.svg";
-import logo4 from "../assets/images/Logo 4.svg";
-import logo5 from "../assets/images/Logo 5.svg";
-import tracker from "../assets/images/time-tracker.svg";
+import logo1 from "../assets/images/home-images/Logo 1.svg";
+import logo2 from "../assets/images/home-images/Logo 2.svg";
+import logo3 from "../assets/images/home-images/Logo 3.svg";
+import logo4 from "../assets/images/home-images/Logo 4.svg";
+import logo5 from "../assets/images/product-images/Logo 5.svg";
+import tracker from "../assets/images/product-images/time-tracker.svg";
 import smallDashboard from "../assets/images/small-dashboard.svg";
-import time from "../assets/images/real-time.svg";
-import ai from "../assets/images/ai.svg";
-import security from "../assets/images/security.svg";
-import colaborate from "../assets/images/colaborate.svg";
-import features from "../assets/images/features.svg";
-import notes from "../assets/images/notes.svg";
-import bilmirem from "../assets/images/bilmirem.svg";
-import chat from "../assets/images/chat.svg";
-import bot from "../assets/images/bot.svg";
+import time from "../assets/images/product-images/real-time.svg";
+import ai from "../assets/images/product-images/ai.svg";
+import security from "../assets/images/product-images/security.svg";
+import colaborate from "../assets/images/product-images/colaborate.svg";
+import features from "../assets/images/product-images/features.svg";
+import notes from "../assets/images/product-images/notes.svg";
+import bilmirem from "../assets/images/home-images/bilmirem.svg";
+import chat from "../assets/images/home-images/chat.svg";
+import bot from "../assets/images/home-images/bot.svg";
 
 function Product() {
   return (
@@ -43,7 +42,7 @@ function Product() {
               </p>
               <div className="button flex items-start gap-4">
                 <div className="trial p-6 bg-primary rounded-xl flex items-center justify-center before:ease relative h-14 w-36 overflow-hidden text-secondary shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-40 drop-shadow-xl">
-                  <Link to="/" className="text-secondary relative z-10">
+                  <Link to="/pricing" className="text-secondary relative z-10">
                     Get Started
                   </Link>
                 </div>
@@ -269,7 +268,6 @@ function Product() {
             </p>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

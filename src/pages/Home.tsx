@@ -1,33 +1,30 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import dashboardImage from "../assets/images/dashboard.svg";
-import activityImage from "../assets/images/activity.svg";
-import arrowIcon from "../assets/images/Icon.svg";
-import logo1 from "../assets/images/Logo 1.svg";
-import logo2 from "../assets/images/Logo 2.svg";
-import logo3 from "../assets/images/Logo 3.svg";
-import logo4 from "../assets/images/Logo 4.svg";
-import logo5 from "../assets/images/Logo 5.svg";
-import sales from "../assets/images/Feature Icon with circle.svg";
-import management from "../assets/images/Feature Icon with circle (1).svg";
-import report from "../assets/images/Feature Icon with circle (2).svg";
-import bilmirem from "../assets/images/bilmirem.svg";
-import chat from "../assets/images/chat.svg";
-import bot from "../assets/images/bot.svg";
-import ceo from "../assets/images/ceo.png";
-import pisik from "../assets/images/pisik.png";
-import idk from "../assets/images/idk.png";
+import activityImage from "../assets/images/home-images/activity.svg";
+import arrowIcon from "../assets/images/home-images/Icon.svg";
+import logo1 from "../assets/images/home-images/Logo 1.svg";
+import logo2 from "../assets/images/home-images/Logo 2.svg";
+import logo3 from "../assets/images/home-images/Logo 3.svg";
+import logo4 from "../assets/images/home-images/Logo 4.svg";
+import sales from "../assets/images/home-images/Feature Icon with circle.svg";
+import management from "../assets/images/home-images/Feature Icon with circle (1).svg";
+import report from "../assets/images/home-images/Feature Icon with circle (2).svg";
+import bilmirem from "../assets/images/home-images/bilmirem.svg";
+import chat from "../assets/images/home-images/chat.svg";
+import bot from "../assets/images/home-images/bot.svg";
+import ceo from "../assets/images/home-images/ceo.png";
+import pisik from "../assets/images/home-images/pisik.png";
+import idk from "../assets/images/home-images/idk.png";
 import { MdSecurity } from "react-icons/md";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { BiLike } from "react-icons/bi";
 import { TiHeadphones } from "react-icons/ti";
-import Footer from "../components/Footer";
 
 function Home() {
   return (
     <>
       <div className="container min-w-full flex justify-center items-center flex-col">
-        <div className="free-trial h-auto flex justify-center items-center flex-col gap-10 p-10 rounded-lg relative overflow-hidden">
+        <div className="free-trial h-auto flex justify-center items-center flex-col gap-10 p-10 rounded-lg relative overflow-hidden mt-10">
           <h1 className="text-primary text-5xl w-[60%] text-center">
             The Best Software to Grow your Sales and Services
           </h1>
@@ -37,9 +34,9 @@ function Home() {
             erat.
           </p>
           <div
-            className="get-free-trial flex items-center justify-center gap-4 p-4 rounded-lg w-[40%] h-auto shadow-lg"
+            className="get-free-trial flex items-center justify-center gap-4 p-4 rounded-lg w-[40%] h-auto drop-shadow-2xl"
             style={{
-              background: "linear-gradient(145deg, #ffffff, #f0f0f0)",
+              background: "linear-gradient(145deg, #ffffff, #ffffff)",
               boxShadow:
                 "0px 4px 6px rgba(0, 0, 0, 0.1), inset 0px 2px 4px rgba(255, 255, 255, 0.6)",
             }}
@@ -47,7 +44,7 @@ function Home() {
             <input
               type="text"
               placeholder="Enter Your Email"
-              className="border border-gray-300 rounded-lg p-3 border-none outline-none"
+              className="rounded-lg p-3 border-none outline-none"
             />
              <div className="trial p-6 bg-primary rounded-xl flex items-center justify-center before:ease relative h-12 w-40 overflow-hidden border border-green-500 bg-green-500 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-40">
             <Link to="/contact" className="text-secondary relative z-10">
@@ -142,13 +139,15 @@ function Home() {
           </div>
         </div>
         <div
-          className="conversion flex justify-center items-center w-full h-auto p-20"
+          className="conversion flex justify-center items-center w-full h-auto p-20 relative">
+            <div
+          className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-3xl"
           style={{
             background:
-              "linear-gradient(90deg, rgba(58,180,177,0.28904061624649857) 72%, rgba(96,32,251,0) 90%)",
+              "linear-gradient(132deg, rgba(0,238,243,0.28343837535014005) 0%, rgba(255,255,255,1) 100%)",
           }}
-        >
-          <div className="left-info flex justify-center items-start flex-col w-[50%] gap-6 text-primary">
+        />
+          <div className="left-info flex justify-center items-start flex-col w-[50%] gap-6 text-primary z-0">
             <h1 className="text-4xl w-[70%]">
               More impressions, more conversions
             </h1>
@@ -163,7 +162,7 @@ function Home() {
             </Link>
           </div>
           </div>
-          <div className="right-image">
+          <div className="right-image z-10">
             <img
               src={activityImage}
               alt="Activity Image"
@@ -171,7 +170,7 @@ function Home() {
             />
           </div>
         </div>
-        <div className="logos w-[86%] h-10 flex items-center justify-between p-20 mt-5">
+        <div className="logos w-[86%] h-10 flex items-center justify-between p-20 mt-5 z-10">
           <img src={logo1} alt="Logo 1" className="w-40 h-auto" />
           <img src={logo2} alt="Logo 2" className="w-40 h-auto" />
           <img src={logo3} alt="Logo 3" className="w-40 h-auto" />
@@ -226,7 +225,7 @@ function Home() {
               nonumy eirmod tempor.
             </p>
           </div>
-          <div className="w-[2px] h-20 sm:h-64 lg:h-56 bg-grey m-4"></div>
+          <div className="w-[2px] h-20 sm:h-64 lg:h-56 bg-gray m-4"></div>
           <div className="row flex items-start justify-center gap-4 flex-col p-4">
             <img src={chat} alt="Chat Icon" />
             <h2 className="text-3xl">Simple collaboration tools</h2>
@@ -297,7 +296,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

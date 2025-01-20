@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import accountBased from "../assets/images/blog-images/account-based-marketing.svg";
-import peopleWorking from "../assets/images/blog-images/peopleWorking.svg";
 import calculateSaas from "../assets/images/blog-images/calculate-saas.svg";
 import customerStrategies from "../assets/images/blog-images/customer-strategiess.svg";
 import dataDriven from "../assets/images/blog-images/data-driven.svg";
@@ -10,9 +9,7 @@ import makeRecurring from "../assets/images/blog-images/make-reccuring.svg";
 import managingRails from "../assets/images/blog-images/managing-rails.svg";
 import checkoutAbandoment from "../assets/images/blog-images/checkout-abandonment.svg";
 
-function Blog() {
-  
-  const posts = [
+const posts = [
     {
       id: "0",
       title: "7 Automation use cases that foster excellent CX",
@@ -96,62 +93,30 @@ function Blog() {
     },
   ];
 
+function PostDetail() {
+
+  const { id } = useParams();
+  const post = posts.find((post) => post.id === id);
+
+  if (!post) {
+    return <div className='flex items-center justify-center p-20 mt-40 mb-20 text-bold text-4xl text-primary'>Post not found!</div>;
+  }
+
   return (
-    <>
-      <div className="container w-full flex items-center justify-center flex-col mt-20 text-primary">
-        <div className="blog flex items-center justify-center">
-          <div className="read-blogs flex items-center justify-center flex-col gap-5 z-10 p-14">
-            <h1 className="text-5xl">Read our latest blogs</h1>
-            <p className="text-md font-light w-[60%] text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
-            </p>
-          </div>
-        </div>
-        <div className="trending-post w-[84%] flex items-center justify-center z-0 p-10 mt-5 border-2 gap-10 border-grey rounded-2xl hover:scale-105 transform transition-all duration-300 cursor-pointer">
-          <div className="left flex items-start justify-center flex-col gap-5 p-2 w-[40%]">
-            <h3 className="text-xl text-gradient">Trending Post</h3>
-            <h2 className="text-4xl w-[100%]">
-              New invoicing features to help you get paid faster
-            </h2>
-            <p className="text-md font-medium w-[82%]">
-              Over the past few months, we’ve added several new features to SaaS
-              Invoicing to help any business get paid faster.
-            </p>
-            <h4 className="text-md font-medium">
-              Luke Matthews | November 8, 2021
-            </h4>
-          </div>
-          <div className="right p-2 rounded-2xl w-[40%]">
-            <img
-              src={peopleWorking}
-              className="w-[100%]"
-              alt="People Working Image"
-            />
-          </div>
-        </div>
-        <h1 className="text-4xl text-center mt-28 p-10 z-0">All Posts</h1>
-        <div className="all-posts w-[90%] grid grid-cols-3 items-center justify-center flex-col p-14 gap-6 mb-20">
-        {posts.map((post) => (
-            <Link to={`/post/${post.id}`} key={post.id}>
-              <div className="flex items-start justify-center flex-col gap-4 p-2 hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer">
-                <img
-                  src={post.image}
-                  className="w-[100%]"
-                  alt={`${post.title} Image`}
-                />
-                <h2 className="text-xl w-[94%]">{post.title}</h2>
-                <p className="text-md font-medium w-[89%]">{post.description}</p>
-                <p className="text-md font-medium">
-                  {post.author} | {post.date}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
+    <div className="detail-page w-full flex items-center justify-center mt-4 text-primary">
+      <div className="post-detail flex flex-col items-center justify-center p-14 gap-8">
+      <div className="text-container flex flex-col items-center justify-center p-4 gap-4">
+      <h1 className='text-4xl w-[70%] text-center leading-tight'>{post.title}</h1>
+      <p className='text-light font-semibold'>{post.author} | {post.date}</p>
       </div>
-    </>
+      <img src={post.image} className='w-[40%] h-auto' alt={post.title} />
+      <div className="post-content flex flex-col items-center justify-center p-4 gap-12 mt-12">
+        <h1 className='text-2xl'>{post.title}</h1>
+        <p className='w-[60%] text-light font-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim dolor et dui bibendum aliquam. Mauris a quam sit amet dui auctor dictum eget a elit. Pellentesque varius diam risus, ut condimentum lorem volutpat vel. Nam vel orci pharetra eros pulvinar cursus nec quis tellus. Quisque feugiat tortor lectus, pretium interdum justo tincidunt a. Donec at congue lectus. Nulla facilisi. Phasellus consectetur sapien accumsan lectus tincidunt placerat. Etiam ornare nibh vel dui egestas, eu posuere metus convallis.<br /><br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim dolor et dui bibendum aliquam. Mauris a quam sit amet dui auctor dictum eget a elit. Pellentesque varius diam risus, ut condimentum lorem volutpat vel. Nam vel orci pharetra eros pulvinar cursus nec quis tellus. Quisque feugiat tortor lectus, pretium interdum justo tincidunt a. Donec at congue lectus. Nulla facilisi. Phasellus consectetur sapien accumsan lectus tincidunt placerat. Etiam ornare nibh vel dui egestas, eu posuere metus convallis.</p>
+      </div>
+    </div>
+    </div>
   );
 }
 
-export default Blog;
+export default PostDetail;
