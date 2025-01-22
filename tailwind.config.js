@@ -19,7 +19,8 @@ export default {
       check: "rgba(213, 245, 234, 1)",
       card: "rgba(215, 231, 249, 1)",
       contact: "rgba(240, 242, 254, 1)",
-      gray: "#cbd5e0"
+      gray: "#cbd5e0",
+      third: "#f0f0f0"
     }
   },
   plugins: [],
