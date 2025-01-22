@@ -80,7 +80,7 @@ function Product() {
               <img src={logo2} alt="Logo 2" className="w-40 h-auto" />
               <img src={logo3} alt="Logo 3" className="w-40 h-auto" />
               <img src={logo4} alt="Logo 4" className="w-40 h-auto" />
-              <img src={logo4} alt="Logo 5" className="w-40 h-auto" />
+              <img src={logo5} alt="Logo 5" className="w-40 h-auto" />
             </div>
           </div>
         </div>

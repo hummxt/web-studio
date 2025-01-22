@@ -1,9 +1,6 @@
 import { useState } from "react";
 import "./Pricing.css";
 import { Link } from "react-router-dom";
-import regularIcon from "../assets/images/pricing-images/regular.svg";
-import platiniumIcon from "../assets/images/pricing-images/platinium.svg";
-import standartIcon from "../assets/images/pricing-images/standart.svg";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
@@ -12,7 +9,7 @@ function Pricing() {
   const [selected, setSelected] = useState("monthly");
   const [openQuestion, setOpenQuestion] = useState(null);
 
-  const toggleAnswer = (index) => {
+  const toggleAnswer = (index: any) => {
     setOpenQuestion(openQuestion === index ? null : index);
   };
 

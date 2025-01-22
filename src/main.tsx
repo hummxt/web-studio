@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-  <Header />
+    <Header />
     <App />
     <Footer />
   </BrowserRouter>
