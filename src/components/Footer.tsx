@@ -45,7 +45,7 @@ function Footer() {
                 className={`lg:hidden transition-transform duration-300 ${activeSection === 1 ? "transform rotate-180" : ""}`}
               />
             </h2>
-            <div className={`lg:flex ${activeSection === 1 ? "flex" : "hidden"} flex-col text-center gap-2 lg:text-left`}>
+            <div className={`lg:flex ${activeSection === 1 ? "flex" : "hidden"} flex-col text-start gap-2 lg:text-left`}>
               <Link to="about" className="text-grey font-light text-md">About us</Link>
               <Link to="about"  className="text-grey font-light text-md">Why Choose us</Link>
               <Link to="pricing"  className="text-grey font-light text-md">Pricing</Link>
@@ -102,7 +102,7 @@ function Footer() {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-secondary text-primary rounded-lg text-white font-bold hover:bg-primary hover:text-secondary transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out w-full sm:w-auto "
+                  className="px-4 py-3 bg-secondary text-primary rounded-lg text-white font-bold hover:bg-primary hover:text-secondary transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out w-full sm:w-auto "
                 >
                   Subscribe
                 </button>
@@ -118,10 +118,10 @@ function Footer() {
               <p className="font-medium">Copyright Finsweet 2025</p>
             </div>
             <div className="social-media flex items-center justify-center gap-3">
-              <FaFacebook />
-              <FaInstagram />
-              <RiTwitterXLine />
-              <FaLinkedin />
+              <Link to="https://www.linkedin.com/in/hummet/"><FaFacebook /></Link>
+              <Link to="https://www.linkedin.com/in/hummet/"><FaInstagram /></Link>
+              <Link to="https://www.linkedin.com/in/hummet/"><RiTwitterXLine /></Link>
+              <Link to="https://www.linkedin.com/in/hummet/"><FaLinkedin /></Link>
             </div>
           </div>
           <div className="horizontal w-[90%] sm:w-[80%] lg:w-[355px] h-[1.4px] bg-grey m-4"></div>

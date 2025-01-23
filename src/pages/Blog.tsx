@@ -11,7 +11,6 @@ import managingRails from "../assets/images/blog-images/managing-rails.svg";
 import checkoutAbandoment from "../assets/images/blog-images/checkout-abandonment.svg";
 
 function Blog() {
-  
   const posts = [
     {
       id: "0",
@@ -98,51 +97,64 @@ function Blog() {
 
   return (
     <>
-      <div className="container w-full flex items-center justify-center flex-col mt-20 text-primary">
+      <div className="container w-full flex items-center justify-center flex-col mt-10 sm:mt-20 text-primary">
+        {/* Blog Header Section */}
         <div className="blog flex items-center justify-center">
-          <div className="read-blogs flex items-center justify-center flex-col gap-5 z-10 p-14">
-            <h1 className="text-5xl">Read our latest blogs</h1>
-            <p className="text-md font-light w-[60%] text-center">
+          <div className="read-blogs flex items-center justify-center flex-col gap-4 sm:gap-5 z-10 p-6 sm:p-8 md:p-14">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
+              Read our latest blogs
+            </h1>
+            <p className="text-sm sm:text-base font-light w-[90%] sm:w-[80%] md:w-[60%] text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
             </p>
           </div>
         </div>
-        <div className="trending-post w-[84%] flex items-center justify-center z-0 p-10 mt-5 border-2 gap-10 border-grey rounded-2xl hover:scale-105 transform transition-all duration-300 cursor-pointer">
-          <div className="left flex items-start justify-center flex-col gap-5 p-2 w-[40%]">
-            <h3 className="text-xl text-gradient">Trending Post</h3>
-            <h2 className="text-4xl w-[100%]">
+
+        {/* Trending Post Section */}
+        <div className="trending-post w-[90%] sm:w-[84%] flex flex-col sm:flex-row items-center justify-center z-0 p-6 sm:p-8 md:p-10 mt-5 border-2 gap-6 sm:gap-10 border-grey rounded-2xl hover:scale-105 transform transition-all duration-300 cursor-pointer">
+        <Link to="http://localhost:5173/post/4" className="flex flex-col sm:flex-row items-center justify-center z-0 cursor-pointer">
+          <div className="left flex items-start justify-center flex-col gap-4 sm:gap-5 p-2 w-full sm:w-[50%] md:w-[40%]">
+            <h3 className="text-lg sm:text-xl text-gradient">Trending Post</h3>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl w-full">
               New invoicing features to help you get paid faster
             </h2>
-            <p className="text-md font-medium w-[82%]">
+            <p className="text-sm sm:text-base font-medium w-full sm:w-[90%]">
               Over the past few months, we’ve added several new features to SaaS
               Invoicing to help any business get paid faster.
             </p>
-            <h4 className="text-md font-medium">
+            <h4 className="text-sm sm:text-base font-medium">
               Luke Matthews | November 8, 2021
             </h4>
           </div>
-          <div className="right p-2 rounded-2xl w-[40%]">
+          <div className="right p-2 rounded-2xl w-full sm:w-[50%] md:w-[40%]">
             <img
               src={peopleWorking}
-              className="w-[100%]"
+              className="w-full"
               alt="People Working Image"
             />
           </div>
+          </Link>
         </div>
-        <h1 className="text-4xl text-center mt-28 p-10 z-0">All Posts</h1>
-        <div className="all-posts w-[90%] grid grid-cols-3 items-center justify-center flex-col p-14 gap-6 mb-20">
-        {posts.map((post) => (
+
+        {/* All Posts Section */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mt-10 sm:mt-20 p-6 sm:p-8 md:p-10 z-0">
+          All Posts
+        </h1>
+        <div className="all-posts w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start justify-center flex-col p-6 sm:p-8 md:p-14 gap-6 mb-10 sm:mb-20">
+          {posts.map((post) => (
             <Link to={`/post/${post.id}`} key={post.id}>
-              <div className="flex items-start justify-center flex-col gap-4 p-2 hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer">
+              <div className="flex items-start justify-center flex-col gap-3 sm:gap-4 p-2 hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer">
                 <img
                   src={post.image}
-                  className="w-[100%]"
+                  className="w-full"
                   alt={`${post.title} Image`}
                 />
-                <h2 className="text-xl w-[94%]">{post.title}</h2>
-                <p className="text-md font-medium w-[89%]">{post.description}</p>
-                <p className="text-md font-medium">
+                <h2 className="text-lg sm:text-xl w-full">{post.title}</h2>
+                <p className="text-sm sm:text-base font-medium w-full">
+                  {post.description}
+                </p>
+                <p className="text-sm sm:text-base font-medium">
                   {post.author} | {post.date}
                 </p>
               </div>
