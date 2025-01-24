@@ -222,13 +222,13 @@ function Home() {
             />
           </div>
         </div>
-        <div className="logos flex flex-wrap justify-center items-center gap-4 sm:gap-6 p-4 sm:p-6 w-full md:w-[90%] mx-auto mt-6 sm:mt-10 z-0">
+        <div className="logos flex flex-wrap justify-around items-center gap-4 sm:gap-6 p-4 sm:p-6 w-full md:w-[90%] mx-auto mt-6 sm:mt-10 z-0">
           {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
             <img
               key={index}
               src={logo}
               alt={`Logo ${index + 1}`}
-              className="w-16 sm:w-20 md:w-24 h-auto"
+              className="w-16 sm:w-20 md:w-32 h-auto"
             />
           ))}
         </div>
@@ -280,7 +280,7 @@ function Home() {
           ].map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-lg shadow-md"
+              className="flex flex-col items-center text-center gap-3 sm:gap-4 p-4 sm:p-6 bg-secondary rounded-lg shadow-md"
             >
               <img
                 src={feature.icon}

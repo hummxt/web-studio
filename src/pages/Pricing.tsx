@@ -104,6 +104,41 @@ function Pricing() {
                       fill="#1D2130"
                     />
                   </svg>
+
+                  <svg
+                    className="second-svg"
+                    width="54"
+                    height="54"
+                    viewBox="0 0 54 54"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="27" cy="27" r="27" fill="#E6E6E6" />
+                    <rect
+                      x="16"
+                      y="27"
+                      width="9"
+                      height="13"
+                      rx="4.5"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="16"
+                      y="16"
+                      width="20"
+                      height="9"
+                      rx="4.5"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="27"
+                      y="27"
+                      width="9"
+                      height="13"
+                      rx="4.5"
+                      fill="#6B7CFF"
+                    />
+                  </svg>
                 </div>
                 <div className="right flex items-start justify-center flex-col">
                   <h2 className="text-xl sm:text-2xl md:text-3xl">Regular</h2>
@@ -205,6 +240,58 @@ function Pricing() {
                       fill="#1D2130"
                     />
                   </svg>
+                  <svg
+                    className="second-svg"
+                    width="54"
+                    height="54"
+                    viewBox="0 0 54 54"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="27"
+                      cy="27"
+                      r="27"
+                      fill="white"
+                      fill-opacity="0.38"
+                    />
+                    <rect
+                      x="15"
+                      y="38"
+                      width="9"
+                      height="15"
+                      rx="4.5"
+                      transform="rotate(-90 15 38)"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="15"
+                      y="27"
+                      width="9"
+                      height="9"
+                      rx="4.5"
+                      transform="rotate(-90 15 27)"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="26"
+                      y="27"
+                      width="9"
+                      height="13"
+                      rx="4.5"
+                      transform="rotate(-90 26 27)"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="31"
+                      y="38"
+                      width="9"
+                      height="8"
+                      rx="4"
+                      transform="rotate(-90 31 38)"
+                      fill="#6B7CFF"
+                    />
+                  </svg>
                 </div>
                 <div className="right flex items-start justify-center flex-col">
                   <h2 className="text-xl sm:text-2xl md:text-3xl">Platinium</h2>
@@ -292,6 +379,40 @@ function Pricing() {
                       height="20"
                       rx="4.5"
                       fill="#1D2130"
+                    />
+                  </svg>
+                  <svg
+                    className="second-svg"
+                    width="54"
+                    height="54"
+                    viewBox="0 0 54 54"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="27" cy="27" r="27" fill="#E6E6E6" />
+                    <rect
+                      x="16"
+                      y="28"
+                      width="9"
+                      height="9"
+                      rx="4.5"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="15"
+                      y="17"
+                      width="9"
+                      height="9"
+                      rx="4.5"
+                      fill="#6B7CFF"
+                    />
+                    <rect
+                      x="27"
+                      y="17"
+                      width="9"
+                      height="20"
+                      rx="4.5"
+                      fill="#6B7CFF"
                     />
                   </svg>
                 </div>
