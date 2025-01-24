@@ -42,9 +42,7 @@ function Contact() {
   return (
     <>
       <div className="container w-full flex items-center justify-center flex-col">
-        {/* Contact Section */}
         <div className="contact w-full flex items-center justify-center flex-col p-6 sm:p-8 md:p-14 text-primary gap-6 sm:gap-10 mb-10 sm:mb-20 overflow-hidden relative z-0">
-          {/* Background Gradients */}
           <div
             className="absolute top-1/2 left-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
             style={{
@@ -59,15 +57,10 @@ function Contact() {
                 "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
             }}
           />
-
-          {/* Contact Header */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">
             Get in touch with us
           </h1>
-
-          {/* Contact Container */}
           <div className="contact-container flex flex-col lg:flex-row items-center justify-center w-full p-6 sm:p-8 md:p-14 gap-6 sm:gap-10">
-            {/* Left Side: Contact Form */}
             <div className="left flex items-start justify-center flex-col bg-contact gap-6 sm:gap-8 p-6 sm:p-8 md:p-14 z-0 drop-shadow-2xl w-full lg:w-[60%]">
               <div className="text-container flex items-start justify-center flex-col gap-3">
                 <h2 className="text-xl sm:text-2xl md:text-3xl">
@@ -127,10 +120,8 @@ function Contact() {
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </div>
-              </form>
+              </form> 
             </div>
-
-            {/* Right Side: Contact Information */}
             <div className="right flex items-start justify-center flex-col gap-4 sm:gap-5 p-6 sm:p-8 md:p-14 z-0 w-full lg:w-[40%]">
               <div className="call flex items-start justify-center gap-4">
                 <div className="icon m-auto rounded-full bg-quality p-2 text-lg sm:text-xl text-secondary">

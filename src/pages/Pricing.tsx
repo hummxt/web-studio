@@ -67,7 +67,6 @@ function Pricing() {
                 "radial-gradient(circle, rgba(0,255,231,0.12657563025210083) 0%, rgba(255,255,255,1) 100%)",
             }}
           >
-            {/* Regular Plan */}
             <div className="regular flex items-center justify-center flex-col bg-secondary rounded-2xl border-secondary cursor-pointer border-4 border-transparent hover:border-quality hover:bg-card transition-all duration-300 ease-in-out w-full sm:w-1/3">
               <div className="title flex items-start justify-start gap-4 sm:gap-5 py-6 sm:py-8 px-6 sm:px-12">
                 <div className="left flex items-start justify-center">
@@ -151,8 +150,6 @@ function Pricing() {
                 </div>
               </div>
             </div>
-
-            {/* Platinium Plan */}
             <div className="platinium flex items-center justify-center flex-col bg-secondary rounded-2xl border-secondary cursor-pointer border-4 border-transparent hover:border-quality hover:bg-card transition-all duration-300 ease-in-out w-full sm:w-1/3 mt-6 sm:mt-0">
               <div className="title flex items-start justify-start gap-4 sm:gap-5 py-6 sm:py-8 px-6 sm:px-12">
                 <div className="left flex items-start justify-center">
@@ -260,8 +257,6 @@ function Pricing() {
                 </div>
               </div>
             </div>
-
-            {/* Standard Plan */}
             <div className="standart flex items-center justify-center flex-col bg-secondary rounded-2xl border-secondary cursor-pointer border-4 border-transparent hover:border-quality hover:bg-card transition-all duration-300 ease-in-out w-full sm:w-1/3 mt-6 sm:mt-0">
               <div className="title flex items-start justify-start gap-4 sm:gap-5 py-6 sm:py-8 px-6 sm:px-12">
                 <div className="left flex items-start justify-center">

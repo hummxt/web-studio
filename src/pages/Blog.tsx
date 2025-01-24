@@ -98,7 +98,6 @@ function Blog() {
   return (
     <>
       <div className="container w-full flex items-center justify-center flex-col mt-10 sm:mt-20 text-primary">
-        {/* Blog Header Section */}
         <div className="blog flex items-center justify-center">
           <div className="read-blogs flex items-center justify-center flex-col gap-4 sm:gap-5 z-10 p-6 sm:p-8 md:p-14">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
@@ -110,8 +109,6 @@ function Blog() {
             </p>
           </div>
         </div>
-
-        {/* Trending Post Section */}
         <div className="trending-post w-[90%] sm:w-[84%] flex flex-col sm:flex-row items-center justify-center z-0 p-6 sm:p-8 md:p-10 mt-5 border-2 gap-6 sm:gap-10 border-grey rounded-2xl hover:scale-105 transform transition-all duration-300 cursor-pointer">
         <Link to="http://localhost:5173/post/4" className="flex flex-col sm:flex-row items-center justify-center z-0 cursor-pointer">
           <div className="left flex items-start justify-center flex-col gap-4 sm:gap-5 p-2 w-full sm:w-[50%] md:w-[40%]">
@@ -136,8 +133,6 @@ function Blog() {
           </div>
           </Link>
         </div>
-
-        {/* All Posts Section */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mt-10 sm:mt-20 p-6 sm:p-8 md:p-10 z-0">
           All Posts
         </h1>

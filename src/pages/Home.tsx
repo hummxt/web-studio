@@ -1,4 +1,5 @@
 import "./Home.css";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import dashboardImage from "../assets/images/dashboard.svg";
 import activityImage from "../assets/images/home-images/activity.svg";
@@ -20,12 +21,69 @@ import idk from "../assets/images/home-images/idk.png";
 import { MdSecurity } from "react-icons/md";
 import { BiLike } from "react-icons/bi";
 import { TiHeadphones } from "react-icons/ti";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
+
+function ContactForm() {
+  const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_yz7gvg9",
+          "template_q20i9da",
+          form.current,
+          "FiY0z79JT-T8CE8S2"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+            toast.success("Message sent successfully!");
+            if (form.current) form.current.reset();
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            toast.error("Failed to send message. Please try again.");
+          }
+        )
+        .finally(() => {
+          setIsSubmitting(false);
+        });
+    }
+  };
+
+  return (
+    <form ref={form} onSubmit={sendEmail} className="flex flex-col sm:flex-row items-center justify-center rounded-2xl h-auto">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Your Email"
+        className="rounded-lg p-2 sm:p-3 border-none outline-none w-full sm:w-auto flex-1 text-xs sm:text-sm form-input"
+        required
+      />
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="trial p-2 sm:p-3 bg-primary rounded-2xl flex items-center justify-center relative w-full sm:w-32 md:w-40 overflow-hidden border text-white shadow-md transition-all before:absolute before:right-0 before:top-0 before:h-10 before:w-4 sm:before:w-6 before:translate-x-8 sm:before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-80"
+      >
+        <span className="text-secondary relative z-10 text-center text-xs sm:text-sm">
+          {isSubmitting ? "Sending..." : "Send Message"}
+        </span>
+      </button>
+    </form>
+  );
+}
 
 function Home() {
   return (
     <>
       <div className="container flex justify-center items-center flex-col">
-        {/* Free Trial Section */}
         <div className="free-trial h-auto flex justify-center items-center flex-col gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 rounded-lg relative overflow-hidden mt-6 sm:mt-10">
           <h1 className="text-primary text-xl sm:text-2xl md:text-3xl lg:text-4xl w-[90%] sm:w-[80%] md:w-[60%] text-center">
             The Best Software to Grow your Sales and Services
@@ -43,30 +101,14 @@ function Home() {
                 "0px 3px 5px rgba(0, 0, 0, 0.1), inset 0px 1px 3px rgba(255, 255, 255, 0.6)",
             }}
           >
-            <input
-              type="text"
-              placeholder="Enter Your Email"
-              className="rounded-lg p-2 sm:p-3 border-none outline-none w-full sm:w-auto flex-1 text-xs sm:text-sm"
-            />
-            <div className="trial p-2 sm:p-3 bg-primary rounded-2xl flex items-center justify-center relative w-full sm:w-32 md:w-40 overflow-hidden border text-white shadow-md transition-all before:absolute before:right-0 before:top-0 before:h-10 before:w-4 sm:before:w-6 before:translate-x-8 sm:before:translate-x-12 before:rotate-6 before:bg-secondary before:opacity-10 before:duration-700 hover:decoration-border hover:before:-translate-x-80">
-              <Link
-                to="/contact"
-                className="text-secondary relative z-10 text-center text-xs sm:text-sm"
-              >
-                Get Free Trial
-              </Link>
-            </div>
+            <ContactForm />
           </div>
         </div>
-
-        {/* Dashboard Image */}
         <img
           src={dashboardImage}
           alt="Dashboard Preview"
           className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] h-auto z-0 mx-auto mt-6 sm:mt-10"
         />
-
-        {/* Quality Section */}
         <div className="quality w-full h-auto flex flex-col items-center justify-center mt-6 sm:mt-10 p-4 sm:p-6 md:p-10">
           <div className="quality-text flex items-center justify-center flex-col text-center gap-3 sm:gap-4">
             <h1 className="text-gradient text-sm sm:text-base md:text-lg">
@@ -114,8 +156,6 @@ function Home() {
             ))}
           </div>
         </div>
-
-        {/* Work Section */}
         <div className="work flex flex-col lg:flex-row items-center justify-center mt-10 mb-10 p-4 sm:p-6 md:p-10 w-[90%] md:w-[80%] mx-auto">
           <div className="left flex items-start justify-center flex-col gap-4 sm:gap-6 text-primary text-center lg:text-left w-full lg:w-[50%]">
             <h3 className="text-gradient text-sm sm:text-base">
@@ -151,9 +191,7 @@ function Home() {
               ))}
           </div>
         </div>
-
-        {/* Conversion Section */}
-        <div className="conversion flex flex-col lg:flex-row items-center justify-center w-full h-auto p-4 sm:p-6 md:p-10 relative">
+        <div className="conversion flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:p-6 md:p-10 relative">
           <div
             className="absolute top-0 left-0 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl"
             style={{
@@ -161,7 +199,7 @@ function Home() {
                 "linear-gradient(132deg, rgba(0,238,243,0.283) 0%, rgba(255,255,255,1) 100%)",
             }}
           />
-          <div className="left-info flex flex-col items-center lg:items-start w-full lg:w-[50%] gap-4 p-20 sm:gap-6 text-primary z-10 text-center lg:text-left">
+          <div className="left-info flex flex-col items-center lg:items-start w-full lg:w-[50%] gap-4 m-40 sm:gap-6 text-primary z-10 text-center lg:text-left">
             <h1 className="text-xl sm:text-2xl md:text-3xl w-[90%] lg:w-[70%]">
               More impressions, more conversions
             </h1>
@@ -184,8 +222,6 @@ function Home() {
             />
           </div>
         </div>
-
-        {/* Logos Section */}
         <div className="logos flex flex-wrap justify-center items-center gap-4 sm:gap-6 p-4 sm:p-6 w-full md:w-[90%] mx-auto mt-6 sm:mt-10 z-0">
           {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
             <img
@@ -196,8 +232,6 @@ function Home() {
             />
           ))}
         </div>
-
-        {/* Sales Section */}
         <div className="sales flex flex-col lg:flex-row items-center justify-center mt-10 mb-10 p-4 sm:p-6 md:p-10 w-[90%] lg:w-[80%] mx-auto">
           <div className="left-dicover flex flex-col gap-4 sm:gap-6 text-primary text-center lg:text-left w-full lg:w-[50%]">
             <h3 className="text-gradient text-sm sm:text-base">
@@ -235,8 +269,6 @@ function Home() {
             ))}
           </div>
         </div>
-
-        {/* Features Section */}
         <h1 className="flex items-center justify-center text-xl sm:text-2xl md:text-3xl text-primary mb-6 sm:mb-10">
           Features
         </h1>
@@ -265,8 +297,6 @@ function Home() {
             </div>
           ))}
         </div>
-
-        {/* Customers Section */}
         <h1 className="flex items-center justify-center text-xl sm:text-2xl md:text-3xl text-primary p-4 mt-10 sm:mt-20">
           The stunning results our customers have experienced
         </h1>
@@ -303,6 +333,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }

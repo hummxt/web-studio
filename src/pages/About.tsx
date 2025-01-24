@@ -18,7 +18,6 @@ function About() {
   return (
     <>
       <div className="container w-full flex items-center justify-center flex-col relative">
-        {/* Background Gradient */}
         <div
           className="absolute top-0 left-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl"
           style={{
@@ -26,8 +25,6 @@ function About() {
               "linear-gradient(132deg, rgba(0,255,231,0.23301820728291311) 0%, rgba(255,255,255,1) 100%)",
           }}
         />
-
-        {/* Our Products Section */}
         <div className="our-products w-full flex items-center justify-center flex-col text-primary relative p-6 sm:p-8 md:p-14">
           <div className="text-container flex items-center justify-center flex-col p-4 text-center gap-4 sm:gap-5">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
@@ -57,8 +54,6 @@ function About() {
             />
           </div>
         </div>
-
-        {/* About Us Section */}
         <div className="about-us-text w-full flex items-center justify-center flex-col text-center gap-4 mt-6 sm:mt-10 p-6 sm:p-8 md:p-14 text-primary">
           <h1 className="text-gradient text-xl sm:text-2xl">About Us</h1>
           <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl w-[90%] sm:w-[80%] md:w-[60%] text-center">
@@ -71,8 +66,6 @@ function About() {
             et ea rebum.
           </p>
         </div>
-
-        {/* Goals & Vision Section */}
         <div className="goals-vision w-full flex flex-col lg:flex-row items-center justify-center bg-contact mt-10 sm:mt-16 p-4 sm:p-6 md:p-8 text-primary">
           <div className="left w-[90%] sm:w-[80%] lg:w-[50%] flex items-start justify-center flex-col p-6 sm:p-8 md:p-10 gap-4 sm:gap-5">
             <h1 className="text-gradient text-xl sm:text-2xl">Our Goals</h1>
@@ -99,8 +92,6 @@ function About() {
             </p>
           </div>
         </div>
-
-        {/* Corporate Values Section */}
         <div className="corporate flex items-center justify-center flex-col p-6 sm:p-8 md:p-14 text-primary">
           <div className="text-container flex items-center justify-center flex-col p-4 sm:p-6 md:p-8 mt-6 sm:mt-10 gap-3 sm:gap-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl">Our corporate values</h1>
@@ -129,8 +120,6 @@ function About() {
             ))}
           </div>
         </div>
-
-        {/* Talented Team Section */}
         <div className="talented-team w-full flex flex-col lg:flex-row items-start justify-center mt-10 sm:mt-16 p-6 sm:p-8 md:p-14 text-primary mb-10 sm:mb-20">
           <div className="left w-[90%] sm:w-[80%] lg:w-[40%] flex items-start flex-col gap-4 sm:gap-5 mt-4 sm:mt-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">

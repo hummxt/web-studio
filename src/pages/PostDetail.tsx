@@ -117,15 +117,11 @@ function PostDetail() {
             {post.author} | {post.date}
           </p>
         </div>
-
-        {/* Post Image */}
         <img
           src={post.image}
           className="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] h-auto"
           alt={post.title}
         />
-
-        {/* Post Content */}
         <div className="post-content flex flex-col items-center justify-center p-4 gap-6 sm:gap-8 mt-6 sm:mt-12">
           <h1 className="text-lg sm:text-xl md:text-2xl">{post.title}</h1>
           <p className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] text-sm sm:text-base font-medium">
