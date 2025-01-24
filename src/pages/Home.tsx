@@ -161,7 +161,7 @@ function Home() {
                 "linear-gradient(132deg, rgba(0,238,243,0.283) 0%, rgba(255,255,255,1) 100%)",
             }}
           />
-          <div className="left-info flex flex-col items-center lg:items-start w-full lg:w-[50%] gap-4 sm:gap-6 text-primary z-10 text-center lg:text-left">
+          <div className="left-info flex flex-col items-center lg:items-start w-full lg:w-[50%] gap-4 p-20 sm:gap-6 text-primary z-10 text-center lg:text-left">
             <h1 className="text-xl sm:text-2xl md:text-3xl w-[90%] lg:w-[70%]">
               More impressions, more conversions
             </h1>
@@ -176,7 +176,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="right-image w-[90%] md:w-[60%] lg:w-[50%] z-10 mt-6 sm:mt-10 lg:mt-0">
+          <div className="right-image w-[90%] md:w-[60%] p-6 lg:w-[50%] z-10 mt-6 sm:mt-10 lg:mt-0">
             <img
               src={activityImage}
               alt="Activity Image"
