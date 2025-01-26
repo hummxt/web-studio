@@ -13,7 +13,7 @@ function Header() {
     <header className="min-w-full h-auto p-6 bg-white relative z-10">
       <div className="container mx-auto flex justify-between items-center ">
         <div className="logo text-3xl text-primary">
-          <Link to="/">{"{FinCompany}"}</Link>
+          <Link to="/">{"{Finsweet}"}</Link>
         </div>
         <nav className="hidden md:flex gap-6 lg:gap-10 justify-center items-center font-semibold">
           <Link to="/" className="text-primary text-lg transition-transform transform hover:scale-105">
