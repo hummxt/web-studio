@@ -1,8 +1,10 @@
 # Web Studio Template
 
 ## Description
-A clean and simple web studio template built with modern technologies. This template is perfect for showcasing projects, creating a portfolio, or serving as the foundation for a small business website
+A clean and simple web studio template built with modern technologies. This template is perfect for showcasing projects, creating a portfolio, or serving as the foundation for a small business website.
 
+## Live demo
+- https://web-studio-git-main-hummxts-projects.vercel.app/
 
 ## Techlonogies used
 - React JS – For building a dynamic and interactive user interface.
@@ -17,7 +19,8 @@ A clean and simple web studio template built with modern technologies. This temp
 
 ## 1. Clone the repository:
 - Clone the repository : git clone https://github.com/hummxt/web-studio 
-- Navigate to the project folder and start the development server:  cd web-studio  and  npm run dev
+- Navigate to the project folder and start the development server:  cd web-studio  and  npm run dev.
+
 
 
 
