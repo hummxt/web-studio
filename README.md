@@ -17,11 +17,6 @@ A clean and simple web studio template built with modern technologies. This temp
 - Email Integration – Easily send messages directly to an email address using the Email JS library.
 - Responsive Design – Fully optimized for mobile phones, tablets, and desktops with Tailwind CSS.
 
-## 1. Clone the repository:
-- Clone the repository : git clone https://github.com/hummxt/web-studio 
-- Navigate to the project folder and start the development server:  cd web-studio  and  npm run dev.
-
-
 
 
 
