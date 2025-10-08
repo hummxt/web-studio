@@ -19,18 +19,20 @@ import bilmirem from "../assets/images/home-images/bilmirem.svg";
 import chat from "../assets/images/home-images/chat.svg";
 import bot from "../assets/images/home-images/bot.svg";
 
+import PageWrapper from "../components/PageWrapper";
+
 function Product() {
   return (
     <>
-      <div className="min-w-full flex items-center justify-center flex-col">
+      <PageWrapper>
         <div
-          className="absolute inset-0 w-full h-full rounded-full blur-3xl z-0"
+          className="absolute inset-0 w-full h-full rounded-full blur-3xl -z-10"
           style={{
             background:
               "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
           }}
         />
-        <div className="services flex flex-col items-center justify-center w-full h-auto p-10 z-0">
+        <div className="services relative z-10 flex flex-col items-center justify-center w-full h-auto p-10">
           <div className="top flex flex-col lg:flex-row items-center justify-center m-10">
             <div className="left flex flex-col items-start gap-6 lg:w-1/2">
               <h1 className="text-primary text-3xl sm:text-4xl lg:text-5xl w-full lg:w-[80%]">
@@ -229,7 +231,7 @@ function Product() {
             </p>
           </div>
         </div>
-      </div>
+      </PageWrapper>
     </>
   );
 }

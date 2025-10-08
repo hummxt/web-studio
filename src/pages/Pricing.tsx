@@ -5,6 +5,8 @@ import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
+import PageWrapper from "../components/PageWrapper";
+
 function Pricing() {
   const [selected, setSelected] = useState("monthly");
   const [openQuestion, setOpenQuestion] = useState(null);
@@ -20,15 +22,15 @@ function Pricing() {
 
   return (
     <>
-      <div className="min-w-full h-auto flex items-center justify-center flex-col">
+      <PageWrapper>
         <div
-          className="absolute top-1/2 left-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
+          className="absolute top-1/2 left-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl -translate-y-1/2 -z-10"
           style={{
             background:
               "linear-gradient(132deg, rgba(0,255,231,0.17699579831932777) 0%, rgba(255,255,255,1) 100%)",
           }}
         />
-        <div className="pricing-plans flex items-center justify-center flex-col p-4 sm:p-6 md:p-10 text-primary z-0">
+        <div className="pricing-plans relative z-10 flex items-center justify-center flex-col p-4 sm:p-6 md:p-10 text-primary">
           <div className="information flex items-center justify-center flex-col text-center gap-4 sm:gap-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-full sm:w-[80%] md:w-[70%] leading-tight">
               Pricing plans that suit you
@@ -522,7 +524,7 @@ function Pricing() {
             ))}
           </div>
         </div>
-      </div>
+      </PageWrapper>
     </>
   );
 }

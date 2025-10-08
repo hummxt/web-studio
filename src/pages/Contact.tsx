@@ -6,6 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 
+import PageWrapper from "../components/PageWrapper";
+
 function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,7 +43,7 @@ function Contact() {
 
   return (
     <>
-      <div className="container w-full flex items-center justify-center flex-col">
+      <PageWrapper>
         <div className="contact w-full flex items-center justify-center flex-col p-6 sm:p-8 md:p-14 text-primary gap-6 sm:gap-10 mb-10 sm:mb-20 overflow-hidden relative z-0">
           <div
             className="absolute top-1/2 left-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl -translate-y-1/2 z-0"
@@ -163,7 +165,7 @@ function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </PageWrapper>
       <ToastContainer />
     </>
   );

@@ -14,10 +14,12 @@ import projectManger from "../assets/images/about-images/projectSpencer.svg";
 import sales from "../assets/images/about-images/salesCaroline.svg";
 import design from "../assets/images/about-images/designAnna.svg";
 
+import PageWrapper from "../components/PageWrapper";
+
 function About() {
   return (
     <>
-      <div className="container w-full flex items-center justify-center flex-col relative">
+      <PageWrapper className="relative flex items-center justify-center flex-col">
         <div
           className="absolute top-0 left-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] rounded-full blur-3xl"
           style={{
@@ -158,7 +160,7 @@ function About() {
             ))}
           </div>
         </div>
-      </div>
+      </PageWrapper>
     </>
   );
 }

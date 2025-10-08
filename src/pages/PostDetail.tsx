@@ -93,20 +93,22 @@ const posts = [
   },
 ];
 
+import PageWrapper from "../components/PageWrapper";
+
 function PostDetail() {
   const { id } = useParams();
   const post = posts.find((post) => post.id === id);
 
   if (!post) {
     return (
-      <div className="flex items-center justify-center p-10 sm:p-20 mt-20 sm:mt-40 mb-10 sm:mb-20 text-bold text-2xl sm:text-4xl text-primary">
-        Post not found!
-      </div>
+      <PageWrapper className="p-10 sm:p-20 mt-20 sm:mt-40 mb-10 sm:mb-20 text-bold text-2xl sm:text-4xl text-primary">
+        <div className="flex items-center justify-center">Post not found!</div>
+      </PageWrapper>
     );
   }
 
   return (
-    <div className="detail-page w-full flex items-center justify-center mt-4 text-primary">
+    <PageWrapper className="mt-4 text-primary">
       <div className="post-detail flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-14 gap-6 sm:gap-8">
         {/* Post Title and Author */}
         <div className="text-container flex flex-col items-center justify-center p-4 gap-3 sm:gap-4">
@@ -146,7 +148,7 @@ function PostDetail() {
           </p>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   );
 }
 

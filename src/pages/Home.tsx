@@ -80,10 +80,12 @@ function ContactForm() {
   );
 }
 
+import PageWrapper from "../components/PageWrapper";
+
 function Home() {
   return (
     <>
-      <div className="container flex justify-center items-center flex-col">
+      <PageWrapper>
         <div className="free-trial h-auto flex justify-center items-center flex-col gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 rounded-lg relative overflow-hidden mt-6 sm:mt-10">
           <h1 className="text-primary text-xl sm:text-2xl md:text-3xl lg:text-4xl w-[90%] sm:w-[80%] md:w-[60%] text-center">
             The Best Software to Grow your Sales and Services
@@ -332,7 +334,7 @@ function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </PageWrapper>
       <ToastContainer />
     </>
   );
